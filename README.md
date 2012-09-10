@@ -1,5 +1,5 @@
-= Compile
-  mvn:compile
+# Compile
+  mvn compile
 
-= Run
+# Run
   mvn exec:java -Dexec.mainClass=com.webkitchen.SampleApp
