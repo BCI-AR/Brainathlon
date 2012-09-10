@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+</head>
+<body bgcolor="white">
+
+Provides classes for designing Infinite Impulse Response (IIR) filters.
+To create a new <code>IIRFilter</code>, first create a <code>FilterSpecification</code>
+object which defines the filter specification.  Then pass the <code>FilterSpecification</code>
+to the <code>FilterDesigner</code>'s <code>createFilter</code> method.
+<p/>
+This is based on Jim Peters' "Fidlib" digital filter designer code, which is
+based, in part, on Tony Fisher's "mkfilter" package.
+<p/>
+Original source code and information on Jim Peters' Fidlib can be found at:<br>
+<a href="http://uazu.net/fiview/">http://uazu.net/fiview/</a>
+<p/>
+Original source code and information on Tony Fisher's mkfilter can be found at:<br>
+<a href="http://www-users.cs.york.ac.uk/~fisher/mkfilter/">http://www-users.cs.york.ac.uk/~fisher/mkfilter/</a>
+
+
+
+<h2>Sample Use</h2>
+
+The following code sample shows sample usage:
+
+<pre>
+public class SampleFilter implements IPlayerSampleListener
+{
+    private IIRFilter filter;
+
+    public SampleFilter()
+    {
+        FilterSpecification spec = new FilterSpecification();
+        spec.setDescription("Alpha band");
+        spec.setAlgorithmType(FilterAlgorithm.BUTTERWORTH);
+        spec.setRangeType(FilterRange.BANDPASS);
+        spec.setOrder(5);
+        spec.setRate(256);
+        spec.setFrequency0(8);
+        spec.setFrequency1(12);
+        spec.setAutoAdjust(true);
+
+        FilterDesigner designer = new FilterDesigner()
+        filter = designer.createFilter(spec);
+    }
+
+    public void receiveSample(double rawSample)
+    {
+        double alphaValue = filter.process(rawSample);
+        notifyListeners(alphaValue);
+    }
+
+    ...
+}
+</pre>
+</body>
+</html>

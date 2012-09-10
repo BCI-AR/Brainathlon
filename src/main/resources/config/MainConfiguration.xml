@@ -1,0 +1,14 @@
+<data.Configuration-ConfigData>
+  <sampleRate>256</sampleRate>
+  <channels>
+    <int>1</int>
+    <int>2</int>
+  </channels>
+  <debugMode>true</debugMode>
+  <midiFileDirectory>C:\openeeg\Brainathlon\software\midi\</midiFileDirectory>
+  <courseOverSong>Mat_Mania_Game_Over.mid</courseOverSong>
+  <userLogFileDirectory>C:\openeeg\Brainathlon\software\userLogs\</userLogFileDirectory>
+  <bandIncreaseConfigurationFile>BandIncreaseConfiguration.xml</bandIncreaseConfigurationFile>
+  <sustainedIncreaseConfigurationFile>SustainedIncreaseConfiguration.xml</sustainedIncreaseConfigurationFile>
+  <dualBandRatioConfigurationFile>DualBandRatioConfiguration.xml</dualBandRatioConfigurationFile>
+</data.Configuration-ConfigData>

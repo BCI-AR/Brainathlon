@@ -1,0 +1,36 @@
+<gameControl.SustainedIncreaseConfiguration>
+  <sampleSize>128</sampleSize>
+  <tolerance>1.0</tolerance>
+  <minNotificationInterval>16</minNotificationInterval>
+  <targetAmplitude>6</targetAmplitude>
+  <timeGoal>5</timeGoal>
+  <timeLimitMinutes>5</timeLimitMinutes>
+  <filterSpec>
+    <description>Alpha</description>
+    <algorithmType class="eeg.analysis.filterdesign.FilterAlgorithm-Butterworth">
+      <name>Butterworth</name>
+    </algorithmType>
+    <rangeType class="eeg.analysis.filterdesign.FilterRange-Bandpass">
+      <name>Bandpass</name>
+    </rangeType>
+    <rate>256</rate>
+    <frequency0>8.0</frequency0>
+    <frequency1>12.0</frequency1>
+    <autoAdjust>true</autoAdjust>
+    <order>5</order>
+    <editable>false</editable>
+  </filterSpec>
+  <filterCoefficients>
+    <double>1.4328139213007392E-7</double>
+    <double>0.9687692182991368</double>
+    <double>-1.888780817710422</double>
+    <double>0.9776675530769263</double>
+    <double>-1.9373671043764888</double>
+    <double>0.9242662416208486</double>
+    <double>-1.8555126725577347</double>
+    <double>0.9383360044218676</double>
+    <double>-1.8933731982856097</double>
+    <double>0.9156801402563697</double>
+    <double>-1.8605106731373373</double>
+  </filterCoefficients>
+</gameControl.SustainedIncreaseConfiguration>

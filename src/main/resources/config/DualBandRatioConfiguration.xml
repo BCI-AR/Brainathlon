@@ -1,0 +1,64 @@
+<gameControl.DualBandRatioConfiguration>
+  <sampleSize>64</sampleSize>
+  <tolerance>100.0</tolerance>
+  <minNotificationInterval>16</minNotificationInterval>
+  <timeLimitMinutes>5</timeLimitMinutes>
+  <minScore>0</minScore>
+  <maxScore>100</maxScore>
+  <targetRatio>1.0</targetRatio>
+  <aboveTargetMultiplier>3</aboveTargetMultiplier>
+  <belowTargetMultiplier>3</belowTargetMultiplier>
+  <maxScoreChange>2</maxScoreChange>
+  <bandOneSpec>
+    <description>High Alpha</description>
+    <algorithmType class="eeg.analysis.filterdesign.FilterAlgorithm-Butterworth">
+      <name>Butterworth</name>
+    </algorithmType>
+    <rangeType class="eeg.analysis.filterdesign.FilterRange-Bandpass">
+      <name>Bandpass</name>
+    </rangeType>
+    <rate>256</rate>
+    <frequency0>10.0</frequency0>
+    <frequency1>13.0</frequency1>
+    <autoAdjust>true</autoAdjust>
+    <order>5</order>
+    <editable>false</editable>
+  </bandOneSpec>
+  <bandOneCoefficients>
+    <double>3.517258604192815E-8</double>
+    <double>0.9776652717131581</double>
+    <double>-1.881572666647632</double>
+    <double>0.9820002556623559</double>
+    <double>-1.9202775919184798</double>
+    <double>0.9445940404356069</double>
+    <double>-1.8577131217695504</double>
+    <double>0.9514428040981473</double>
+    <double>-1.8853123114988064</double>
+    <double>0.93610823034345</double>
+    <double>-1.8607583140309372</double>
+  </bandOneCoefficients>
+  <bandTwoSpec>
+    <description>Low Alpha</description>
+    <algorithmType class="eeg.analysis.filterdesign.FilterAlgorithm-Butterworth" reference="../../bandOneSpec/algorithmType"/>
+    <rangeType class="eeg.analysis.filterdesign.FilterRange-Bandpass" reference="../../bandOneSpec/rangeType"/>
+    <rate>256</rate>
+    <frequency0>7.0</frequency0>
+    <frequency1>10.0</frequency1>
+    <autoAdjust>true</autoAdjust>
+    <order>5</order>
+    <editable>false</editable>
+  </bandTwoSpec>
+  <bandTwoCoefficients>
+    <double>3.5172586041925934E-8</double>
+    <double>0.9768584357656158</double>
+    <double>-1.9205909617550208</double>
+    <double>0.982811338494581</double>
+    <double>-1.9520641360846425</double>
+    <double>0.9432906764815019</double>
+    <double>-1.893929783838847</double>
+    <double>0.9527574320131389</double>
+    <double>-1.9188049478434188</double>
+    <double>0.9361082303434497</double>
+    <double>-1.895412675563202</double>
+  </bandTwoCoefficients>
+</gameControl.DualBandRatioConfiguration>
